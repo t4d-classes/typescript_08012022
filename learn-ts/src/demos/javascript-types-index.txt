@@ -1,0 +1,80 @@
+/* eslint @typescript-eslint/no-explicit-any: "off" */
+
+export function echo(input: string | number) {
+  return input;
+}
+
+// primitive types
+
+let t: any = undefined;
+console.log(typeof t); // undefined
+
+t = 'hello';
+console.log(typeof t); // string
+
+t = 2;
+console.log(typeof t); // number
+
+t = true;
+console.log(typeof t); // boolean
+
+t = null;
+console.log(typeof t); // should output null, but because of JS error, outputs 'object'
+
+// symbol
+// bigint
+
+t = { firstName: 'Bob', lastName: 'Smith' };
+console.log(typeof t); // outputs 'object'
+
+t = [1,2,3,4,5,6];
+console.log(typeof t); // outputs 'object'
+
+t = function() { return; };
+console.log(typeof t); // outputs 'function'
+
+console.dir({});
+console.dir(function() { return; });
+
+console.log({} instanceof Object);
+console.log(function() { return; } instanceof Object);
+console.log(function() { return; } instanceof Function);
+console.log([] instanceof Object);
+console.log([] instanceof Array);
+
+
+// typeof - differentiates between primitive types in JavaScript
+// instanceof - diffentiates between objects based upon the constructor function used to create the object
+
+
+const person = {
+  firstName: 'Bob'
+};
+
+// data structure like a struct or record
+const fruit = {
+  name: 'apple',
+  price: 1.34,
+  qty: 2,
+};
+
+// more like an object in classical object-oriented programming
+const vegetable = {
+  name: 'carrot',
+  price: 1.23,
+  qty: 3,
+  totalValue() {
+    return this.price * this.qty;
+  },
+};
+
+
+
+console.log(String(person)); // [object Object]
+console.log(String(fruit));  // [object Object]
+
+console.log(vegetable.totalValue());
+
+
+
+
