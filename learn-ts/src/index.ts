@@ -1,7 +1,8 @@
-export function echo(input: string) {
+export function echo(input: string | number) {
+
   return input;
 }
 
-const message = 'It works!';
+const message = 42;
 
 console.log(echo(message));
