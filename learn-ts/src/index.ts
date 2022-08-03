@@ -5,51 +5,48 @@ export function echo(input: string | number) {
   return input;
 }
 
-// enums
 
-// enum MembershipLevel {
-//   Bronze,
-//   Silver,
-//   Gold,
-//   Platinum,
+
+
+// export function doIt1(userId: string, data1: any) {
+
 // }
 
-// const memberLevel = MembershipLevel.Platinum;
 
+// export function doIt2(userId: string, data2: any) {
 
-// if (memberLevel === MembershipLevel.Platinum) {
-//   console.log("you rock!");
-// } else {
-//   console.log("you rock less!");
 // }
 
-// const MEMBER_LEVEL_BRONZE = "bronze";
-// const MEMBER_LEVEL_SILVER = "silver";
-// const MEMBER_LEVEL_GOLD = "gold";
-// const MEMBER_LEVEL_PLATINUM = "platinum";
 
-// let memberLevel: string;
+// export function doIt3(userId: string, data3: any) {
 
-// memberLevel = MEMBER_LEVEL_PLATINUM;
-
-// memberLevel = "ruby";
- 
-// if (memberLevel === MEMBER_LEVEL_PLATINUM) {
-//   console.log("you rock!");
-// } else {
-//   console.log("you rock less!");
 // }
 
-// string literals
+export class DoIt {
 
-// type MembershipLevel = 'bronze' | 'silver' | 'gold' | 'platinum';
+  constructor(private userId: string) { }
 
-// let memberLevel: MembershipLevel;
 
-// memberLevel = 'ruby';
+  doIt1(data1: any) {
+    // this.userId;
+  }
+  
+  
+  doIt2(data2: any) {
+    // this.userId;
+  }
+  
+  
+  doIt3(data3: any) {
+    // this.userId;
+  }
 
-// if (memberLevel === 'platinum') {
-//   console.log("you rock!");
-// } else {
-//   console.log("you rock less!");
-// }
+}
+
+const userId = 'user-id';
+
+const doIt = new DoIt(userId);
+
+doIt.doIt1('a');
+doIt.doIt2('b');
+doIt.doIt3('c');

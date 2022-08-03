@@ -1,0 +1,26 @@
+/* eslint-disable prefer-const */
+/* eslint @typescript-eslint/no-inferrable-types: "off" */
+
+export function echo(input: string | number) {
+  return input;
+}
+
+
+// const myDict: {
+//   [ x: string ]: any,
+// } = {};
+
+
+// myDict.someEntry = { name: 'some value'};
+
+// myDict.anotherEntry = { name: 'another value'};
+
+// myDict.whateverProp = 3;
+
+// const myDict = new Map<string, any>();
+// myDict.set('someEntry', { name: 'some value'});
+
+// myDict.has('someEntry');
+// myDict.get('someEntry');
+
+// myDict.entries
