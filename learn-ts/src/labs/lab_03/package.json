@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "dev": "node --inspect-brk ./dist/index.js"
+  }
+}
