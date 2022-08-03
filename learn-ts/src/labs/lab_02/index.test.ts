@@ -41,6 +41,7 @@ describe('Given a car', () => {
       // expect(result).toBe(car);
 
       expect(result).toEqual(car);
+
     });
   });
 });

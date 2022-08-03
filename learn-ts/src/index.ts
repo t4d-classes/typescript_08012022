@@ -1,48 +1,55 @@
+/* eslint-disable prefer-const */
 /* eslint @typescript-eslint/no-inferrable-types: "off" */
 
 export function echo(input: string | number) {
   return input;
 }
 
-const age: number = 1;
+// enums
 
-console.log(age);
+// enum MembershipLevel {
+//   Bronze,
+//   Silver,
+//   Gold,
+//   Platinum,
+// }
 
-// type alias is a typescript thing
-type Person = { firstName: string, lastName: string };
-
-interface Person3 {
-  firstName: string;
-  lastName: string;
-}
-
-// classes are JavaScript thing that TypeScript understands and build upon
-class Person2 {
-  firstName!: string;
-  lastName!: string;
-}
+// const memberLevel = MembershipLevel.Platinum;
 
 
+// if (memberLevel === MembershipLevel.Platinum) {
+//   console.log("you rock!");
+// } else {
+//   console.log("you rock less!");
+// }
 
+// const MEMBER_LEVEL_BRONZE = "bronze";
+// const MEMBER_LEVEL_SILVER = "silver";
+// const MEMBER_LEVEL_GOLD = "gold";
+// const MEMBER_LEVEL_PLATINUM = "platinum";
 
-const person: Person = {
-  firstName: 'Bob',
-  lastName: 'Smith',
-};
+// let memberLevel: string;
 
-const person2: Person2 = person;
-const person3: Person3 = person;
+// memberLevel = MEMBER_LEVEL_PLATINUM;
 
-console.log(person);
-console.log(person2);
-console.log(person3);
+// memberLevel = "ruby";
+ 
+// if (memberLevel === MEMBER_LEVEL_PLATINUM) {
+//   console.log("you rock!");
+// } else {
+//   console.log("you rock less!");
+// }
 
-const p2: Person2 = person;
+// string literals
 
-const p3 = new Person2();
+// type MembershipLevel = 'bronze' | 'silver' | 'gold' | 'platinum';
 
-console.log(typeof p2 === typeof p3);
-console.log(p2 instanceof Person2); // false
-console.log(p3 instanceof Person2); // true
+// let memberLevel: MembershipLevel;
 
+// memberLevel = 'ruby';
 
+// if (memberLevel === 'platinum') {
+//   console.log("you rock!");
+// } else {
+//   console.log("you rock less!");
+// }

@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build-app": "tsc",
+    "run-it": "node ./dist/index.js"
+  }
+}
