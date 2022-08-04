@@ -6,7 +6,7 @@ jest.mock('labs/lab_05/io');
 describe('Given a file logger instance', () => {
   describe('When the log function is called', () => {
     test('Then I expect saveToFile to receive the message to be logged', () => {
-      const fileLogger = new FileLogger('file-logger', 'info');
+      const fileLogger = new FileLogger('info');
       fileLogger.log('message');
 
       expect(saveToFile).toHaveBeenCalledWith('info: message');
@@ -17,7 +17,7 @@ describe('Given a file logger instance', () => {
 describe('Given a console logger instance', () => {
   describe('When the log function is called', () => {
     test('Then I expect saveToFile to receive the message to be logged', () => {
-      const consoleLogger = new ConsoleLogger('file-logger', 'debug');
+      const consoleLogger = new ConsoleLogger('debug');
       consoleLogger.log('message');
 
       expect(saveToConsole).toHaveBeenCalledWith('debug: message');
@@ -28,7 +28,7 @@ describe('Given a console logger instance', () => {
 describe('Given a database logger instance', () => {
   describe('When the log function is called', () => {
     test('Then I expect saveToFile to receive the message to be logged', () => {
-      const databaseLogger = new DatabaseLogger('database-logger', 'error');
+      const databaseLogger = new DatabaseLogger();
       databaseLogger.log('message');
 
       expect(saveToDatabase).toHaveBeenCalledWith('error: message');

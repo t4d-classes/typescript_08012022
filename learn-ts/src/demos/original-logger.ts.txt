@@ -1,0 +1,37 @@
+import { saveToFile, saveToConsole, saveToDatabase } from "./io";
+
+export type LogLevel = 'info' | 'debug' | 'error';
+
+export type Logger = {
+  name: string;
+  level: LogLevel;
+  log: (message: string) => void;
+}
+
+export const fileLogger: Logger = {
+  name: 'file-logger',
+  level: 'info',
+  // log: function(message: string) {
+  log(message: string) {
+    const logMessage = `${this.level} ${message}`;
+    saveToFile(logMessage);
+  },
+};
+
+export const consoleLogger: Logger = {
+  name: 'console-logger',
+  level: 'debug',
+  log(message: string) {
+    const logMessage = `${this.level} ${message}`;
+    saveToConsole(logMessage);
+  },
+};
+
+export const databaseLogger: Logger = {
+  name: 'database-logger',
+  level: 'error',
+  log(message: string) {
+    const logMessage = `${this.level} ${message}`;    
+    saveToDatabase(logMessage);
+  },
+};
